@@ -1,0 +1,27 @@
+{
+    "name": "clusterpoint/laravel-php-client-api-v4",
+    "type": "library",
+    "license": "MIT",
+    "version": "4.0.2",
+    "keywords": ["clusterpoint","api","database","nosql","php","jssql", "laravel"],
+    "homepage": "https://www.clusterpoint.com/",
+    "require": {
+      "php": ">=5.4",
+      "ext-curl": "*",
+      "clusterpoint/php-client-api-v4": "dev-master"
+    },
+    "authors": [
+      {
+        "name": "Marks Gerasimovs",
+        "email": "marks.gerasimovs@clusterpoint.com"
+      }, {
+        "name": "Clusterpoint",
+        "email": "info@clusterpoint.com"
+      }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Clusterpoint\\": "src/"
+        }
+    }
+}

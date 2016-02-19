@@ -1,9 +1,9 @@
 # Clusterpoint 4.0 PHP Client API - Laravel Package
 
-[![License](https://poser.pugx.org/clusterpoint/php-client-api-v4/license)](https://packagist.org/packages/clusterpoint/php-client-api-v4)
-[![Total Downloads](https://poser.pugx.org/clusterpoint/php-client-api-v4/downloads)](https://packagist.org/packages/clusterpoint/php-client-api-v4)
-[![Latest Stable Version](https://poser.pugx.org/clusterpoint/php-client-api-v4/v/stable)](https://packagist.org/packages/clusterpoint/php-client-api-v4)
-[![Latest Unstable Version](https://poser.pugx.org/clusterpoint/php-client-api-v4/v/unstable)](https://packagist.org/packages/clusterpoint/php-client-api-v4)
+[![License](https://poser.pugx.org/clusterpoint/laravel-clusterpoint/license)](https://packagist.org/packages/clusterpoint/php-client-api-v4)
+[![Total Downloads](https://poser.pugx.org/clusterpoint/laravel-clusterpoint/downloads)](https://packagist.org/packages/clusterpoint/php-client-api-v4)
+[![Latest Stable Version](https://poser.pugx.org/clusterpoint/laravel-clusterpoint/v/stable)](https://packagist.org/packages/clusterpoint/php-client-api-v4)
+[![Latest Unstable Version](https://poser.pugx.org/clusterpoint/laravel-clusterpoint/v/unstable)](https://packagist.org/packages/clusterpoint/php-client-api-v4)
 
 ## Official Documentation
 
@@ -11,7 +11,7 @@ Documentation for the API can be found on the [Clusterpoint website](https://www
 
 ## Install
 1. **Install** the package.  
-``composer require clusterpoint/php-client-api-v4-laravel-package``
+``composer require clusterpoint/laravel-clusterpoint``
 1. **Register** Service Provider in your `config/app.php` file.  
 ``Clusterpoint\ClusterpointServiceProvider::class``
 1. **Publish** config file.  

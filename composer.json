@@ -8,7 +8,7 @@
     "require": {
       "php": ">=5.4",
       "ext-curl": "*",
-      "clusterpoint/php-client-api-v4": "dev-master"
+      "clusterpoint/php-client-api-v4": "4.0.2"
     },
     "authors": [
       {

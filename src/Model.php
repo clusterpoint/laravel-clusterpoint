@@ -34,9 +34,9 @@ abstract class Model implements UrlRoutable
      */
     protected $primaryKey = "_id";
     /**
-     * The primary key for the model.
+     * Holds the Service Instance that extends Query Builder Functions.
      *
-     * @var string
+     * @var Clusterpoint\Instance\Service
      */
     protected $queryBuilder;
     /**

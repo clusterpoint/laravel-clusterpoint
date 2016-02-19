@@ -1,8 +1,8 @@
 {
-    "name": "clusterpoint/laravel-php-client-api-v4",
+    "name": "clusterpoint/laravel-clusterpoint",
     "type": "library",
     "license": "MIT",
-    "version": "4.0.2",
+    "version": "4.0.1",
     "keywords": ["clusterpoint","api","database","nosql","php","jssql", "laravel"],
     "homepage": "https://www.clusterpoint.com/",
     "require": {

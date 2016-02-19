@@ -9,28 +9,28 @@ use Illuminate\Support\ServiceProvider;
  * Laravel 5 Clusterpoint 4.0 PHP Client API
  *
  * @category   Clusterpoint 4.0 PHP Client API - Laravel extension
- * @package    clusterpoint/php-client-api-v4-laravel
+ * @package    clusterpoint/laravel-clusterpoint
  * @copyright  Copyright (c) 2016 Clusterpoint (http://www.clusterpoint.com)
  * @author     Marks Gerasimovs <marks.gerasimovs@clusterpoint.com>
  * @license    http://opensource.org/licenses/MIT    MIT
  */
-class ClusterpointServiceProvider extends ServiceProvider {
+class ClusterpointServiceProvider extends ServiceProvider
+{
     /**
-     * Register.
+     * Registers Provider.
      *
      * @return void
      */
     public function register()
     {
-
     }
     /**
-     * Bootstrap the application events.
+     * Bootstrap the application events. Publish config.
      *
      * @return void
      */
     public function boot()
-    { 
+    {
         $this->publishes([
             __DIR__ . '/config.example' => config_path('clusterpoint.php'),
         ]);

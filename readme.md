@@ -147,6 +147,3 @@ class ExampleController extends Controller
 If you discover a vulnerability or bug within our API or database functionality, please send an e-mail to our support team at info@clusterpoint.com.
 
 <a name="license"></a>
-## License
-
-The Clusterpoint PHP client API is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)

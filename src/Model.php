@@ -14,13 +14,13 @@ use Illuminate\Contracts\Routing\UrlRoutable;
  * Laravel 5 Clusterpoint 4.0 PHP Client API
  *
  * @category   Clusterpoint 4.0 PHP Client API - Laravel extension
- * @package    clusterpoint/php-client-api-v4-laravel
+ * @package    clusterpoint/laravel-clusterpoint
  * @copyright  Copyright (c) 2016 Clusterpoint (http://www.clusterpoint.com)
  * @author     Marks Gerasimovs <marks.gerasimovs@clusterpoint.com>
  * @license    http://opensource.org/licenses/MIT    MIT
  */
-abstract class Model implements UrlRoutable {
-
+abstract class Model implements UrlRoutable
+{
     /**
      * The connection name for the model.
      *
@@ -40,9 +40,8 @@ abstract class Model implements UrlRoutable {
      */
     protected $queryBuilder;
     /**
-     * Set connection access points.
+     * Creates instance, sets Query Scope, Connection instance and selects database to work with.
      *
-     * @param  \stdClass  $connection
      * @return void
      */
     public function __construct()
@@ -112,7 +111,7 @@ abstract class Model implements UrlRoutable {
      *
      * @return string
      */
-    public function getAttribute($key) 
+    public function getAttribute($key)
     {
         return $this->scope->{$key};
     }

@@ -19,12 +19,12 @@ Documentation for the API can be found on the [Clusterpoint website](https://www
 1. **Edit config** – The main config file path is  
   ``config/clusterpoint.php``  
 however we recommend to add your credentials to your .env file in laravel project root directory.
-  ```PHP
+```
 CP_HOST=https://api-eu.clusterpoint.com/v4  
 CP_ID=42  
 CP_USERNAME=myusername@clusterpoint.com  
 CP_PASSWORD=mypassword  
-  ```
+```
 
 ## Usage examples
 * [Client Usage Example](#client)

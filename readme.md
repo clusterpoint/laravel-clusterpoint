@@ -7,7 +7,7 @@
 
 ## Official Documentation
 
-Documentation for the API can be found on the [Clusterpoint website](https://www.clusterpoint.com/apidoc/php-v4/).
+Documentation for the API can be found on the [Clusterpoint website](https://www.clusterpoint.com/docs/api/4/php/345/overview).
 
 ## Install
 1. **Install** the package.  

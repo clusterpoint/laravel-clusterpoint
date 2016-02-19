@@ -1,9 +1,6 @@
 # Clusterpoint 4.0 PHP Client API - Laravel Package
 
-[![License](https://poser.pugx.org/clusterpoint/laravel-clusterpoint/license)](https://packagist.org/packages/clusterpoint/php-client-api-v4)
-[![Total Downloads](https://poser.pugx.org/clusterpoint/laravel-clusterpoint/downloads)](https://packagist.org/packages/clusterpoint/php-client-api-v4)
-[![Latest Stable Version](https://poser.pugx.org/clusterpoint/laravel-clusterpoint/v/stable)](https://packagist.org/packages/clusterpoint/php-client-api-v4)
-[![Latest Unstable Version](https://poser.pugx.org/clusterpoint/laravel-clusterpoint/v/unstable)](https://packagist.org/packages/clusterpoint/php-client-api-v4)
+[![Latest Stable Version](https://poser.pugx.org/clusterpoint/laravel-clusterpoint/v/stable)](https://packagist.org/packages/clusterpoint/laravel-clusterpoint) [![Total Downloads](https://poser.pugx.org/clusterpoint/laravel-clusterpoint/downloads)](https://packagist.org/packages/clusterpoint/laravel-clusterpoint) [![Latest Unstable Version](https://poser.pugx.org/clusterpoint/laravel-clusterpoint/v/unstable)](https://packagist.org/packages/clusterpoint/laravel-clusterpoint) [![License](https://poser.pugx.org/clusterpoint/laravel-clusterpoint/license)](https://packagist.org/packages/clusterpoint/laravel-clusterpoint)
 
 ## Official Documentation
 

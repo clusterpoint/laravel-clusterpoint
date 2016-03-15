@@ -120,7 +120,15 @@ class Connection implements ConnectionInterface
     {
         if (gettype($connection)=="string") {
             $connection = include(config_path('clusterpoint.php'));
+            if (isset($connArr[$connection]))
+                $connection = $connArr[$connection];
+            elseif (isset($connArr['account_id']))
+                $connection = $connArr;
+            else
+                return false;
         }
+        if (!isset($connection['host']) || !isset($connection['account_id']) || !isset($connection['username']) || !isset($connection['password']))
+            return false;
         return $connection;
     }
     /**

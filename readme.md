@@ -27,6 +27,7 @@ CP_PASSWORD=mypassword
 * [Client Usage Example](#client)
 * [Model Usage Example](#model)
 * [Route Model Binding Example](#route)
+* [Multiple connections Example](#connect)
 
 
 <a name="client"></a>
@@ -140,6 +141,54 @@ class ExampleController extends Controller
 	}
 }
 ```
+
+<a name="connect"></a>
+##Multiple connections Example
+You can set multiple connections and use what you needed in the Model.
+
+First add a connection setting array in the main config file ``config/clusterpoint.php``.
+For example a connection named "test"
+```PHP
+<?php
+
+return array(
+  "default" => array(
+    'host' => env('CP_HOST', 'https://api-eu.clusterpoint.com/v4'),
+    'account_id' => env('CP_ID', ''),
+    'username' => env('CP_USERNAME', ''),
+    'password' => env('CP_PASSWORD', ''),
+  ),
+  "test" => array(
+    'host' => env('CP1_HOST', 'https://api-eu.clusterpoint.com/v4'),
+    'account_id' => env('CP1_ID', ''),
+    'username' => env('CP1_USERNAME', ''),
+    'password' => env('CP1_PASSWORD', ''),
+  )
+);
+
+```
+
+However we recommend you to add your credentials to your .env file in the laravel project root directory.
+```
+CP1_HOST=https://api-eu.clusterpoint.com/v4  
+CP1_ID=42  
+CP1_USERNAME=myusername@clusterpoint.com  
+CP1_PASSWORD=mypassword  
+```
+Now You can use the connection in Your Model:
+```PHP
+<?php
+
+namespace App;
+
+use Clusterpoint\Model;
+
+class Example extends Model
+{
+	protected $connection = "test";
+}
+```
+
 
 <a name="bugs"></a>
 ## Bugs and Vulnerabilities

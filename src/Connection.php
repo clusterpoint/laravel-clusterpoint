@@ -119,7 +119,7 @@ class Connection implements ConnectionInterface
     private function checkSource($connection)
     {
         if (gettype($connection)=="string") {
-            $connection = include(config_path('clusterpoint.php'));
+            $connArr = include(config_path('clusterpoint.php'));
             if (isset($connArr[$connection]))
                 $connection = $connArr[$connection];
             elseif (isset($connArr['account_id']))

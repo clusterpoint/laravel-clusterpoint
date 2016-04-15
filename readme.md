@@ -193,6 +193,6 @@ class Example extends Model
 <a name="bugs"></a>
 ## Bugs and Vulnerabilities
 
-If you discover a vulnerability or bug within our API or database functionality, please send an e-mail to our support team at info@clusterpoint.com.
+If you discover a vulnerability or bug within our API or database functionality, please send an e-mail to our support team at support@clusterpoint.com.
 
 <a name="license"></a>

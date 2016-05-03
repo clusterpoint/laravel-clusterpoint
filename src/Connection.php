@@ -88,6 +88,7 @@ class Connection implements ConnectionInterface
      */
     private function parseConfig($connection)
     {
+        $this->debug = false;
         $allowed_keys = array_keys(get_object_vars($this));
         foreach ($connection as $key => $value) {
             $this->setParam($this->camelCase($key), $value, $allowed_keys);

@@ -92,7 +92,6 @@ class Connection implements ConnectionInterface
         foreach ($connection as $key => $value) {
             $this->setParam($this->camelCase($key), $value, $allowed_keys);
         }
-        $this->debug = config('app.debug');
         $this->transactionId = null;
         $this->query = null;
     }

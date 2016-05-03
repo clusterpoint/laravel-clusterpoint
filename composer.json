@@ -2,7 +2,7 @@
     "name": "clusterpoint/laravel-clusterpoint",
     "type": "library",
     "license": "MIT",
-    "version": "4.0.3",
+    "version": "4.0.4",
     "keywords": ["clusterpoint","api","database","nosql","php","jssql", "laravel"],
     "homepage": "https://www.clusterpoint.com/",
     "require": {

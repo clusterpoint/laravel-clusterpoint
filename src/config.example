@@ -22,6 +22,7 @@ return array(
         'host' => env('CP_HOST', 'https://api-eu.clusterpoint.com/v4'),
         'account_id'  => env('CP_ID', ''),
         'username'=> env('CP_USERNAME', ''),
-        'password'  => env('CP_PASSWORD', '')
+        'password'  => env('CP_PASSWORD', ''),
+        'debug'  => false
     )
 );

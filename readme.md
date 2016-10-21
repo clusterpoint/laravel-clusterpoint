@@ -1,4 +1,4 @@
-# Clusterpoint 4.0 PHP Client API - Laravel Package
+# Clusterpoint 4.x PHP Client API - Laravel Package
 
 [![Latest Stable Version](https://poser.pugx.org/clusterpoint/laravel-clusterpoint/v/stable)](https://packagist.org/packages/clusterpoint/laravel-clusterpoint) [![Total Downloads](https://poser.pugx.org/clusterpoint/laravel-clusterpoint/downloads)](https://packagist.org/packages/clusterpoint/laravel-clusterpoint) [![Latest Unstable Version](https://poser.pugx.org/clusterpoint/laravel-clusterpoint/v/unstable)](https://packagist.org/packages/clusterpoint/laravel-clusterpoint) [![License](https://poser.pugx.org/clusterpoint/laravel-clusterpoint/license)](https://packagist.org/packages/clusterpoint/laravel-clusterpoint)
 
@@ -43,26 +43,21 @@ use Clusterpoint\Client; // use our package.
 class ExampleController extends Controller
 {
     public function getIndex() {
-		//Initialize the service
-		$cp = new Client([
-		    'host'      => 'https://api-eu.clusterpoint.com/v4',
-		    'account_id'  => '42',
-		    'username'  => 'myusername',
-		    'password'  => 'mypassword'
-		]);
-		// Set the database to work with to initalize the query builder for it.
-		$db = $cp->database("bikes");
+		
+		$cp = new Client(); // by defualt uses 'default' connection name from ./config/clusterpoint.php
+		
+		// Set the collection to work with to initalize the query builder for it.
+		$collection = $cp->database("database.collection");
 
-		// Or if your config isset you could do just this.
-		$db = Client::database("bikes");
 		// Build your query
-		$results = $db->where('color', 'red')
+		$results = $collection->where('color', 'red')
 			->where('availability', true)
 			->limit(5)
 			->groupBy('category')
 			->orderBy('price')
 			->select(['name', 'color', 'price', 'category'])
 			->get();
+			
 		// Access your results
 		return $results[0]->price;
 	}
@@ -71,7 +66,7 @@ class ExampleController extends Controller
 
 <a name="model"></a>
 ##Model Usage Example
-First create your model in `app` folder:  
+First create your model in `app` folder:    
 ```PHP
 <?php
 
@@ -81,23 +76,11 @@ use Clusterpoint\Model;
 
 class Example extends Model
 {
-	
+	protected $db = "database.collection"; // set your databse and collection names
+	//protected $primaryKey = "custom_id"; // If you want to define specific specific primary key, default = _id
 }
 ```
-This will assume that database selected is called "examples" and primary key is "_id". If you want to define specific database to refer to or specific primary key you use there, you have to do it like this:  
-```PHP
-<?php
 
-namespace App;
-
-use Clusterpoint\Model;
-
-class Example extends Model
-{
-	protected $db = "my_database_name";
-	protected $primaryKey = "custom_id";
-}
-```
 Now you can use model inside the controller.
 ```PHP
 <?php
@@ -110,6 +93,10 @@ class ExampleController extends Controller
 {	
     public function getIndex() {
 		$example = Example::where('price', '>', 200)->first();
+		
+		$example->price = 300;
+		$example->save();
+		
 		return view('example', compact('example'));
 	}
 }
